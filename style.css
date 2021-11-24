@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor1: #FCFFFD;
+    --cor2: #938581;
+    --cor3: #EDB230;
+    --cor4: #49436896;
+    --fonte: "Merriweather Sans"
+}
+body {
+    background-color: var(--cor4);
+    margin: 0px;
+    font-family: var(--fonte);
+}
+header {
+    width: 100vw;
+    height: 120px;
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-size: 3em;
+    text-align: center;
+    line-height: 120px;
+    border-bottom: 5px solid #938581;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.467);
+}
+.menu {
+    width: 20vw;
+    height: 85vh;
+    position: absolute;
+    top: 125px;
+    background-color: var(--cor4);
+}
+.fechado {
+    width: 10vw;
+}
+.calculo {
+    width: 50vw;
+    height: fit-content;
+    position: absolute;
+    top: 240px;
+    left: 35vw;
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding-bottom: 40px;
+}
+.topico {
+    text-align: center;
+    height: 60px;
+    border-bottom: 3px solid  #494368 ;
+    cursor: pointer;
+}
+.topico  > p {
+    color: white;
+    font-size: 1.7em;
+    text-decoration: none;
+    margin: 0px;
+    line-height: 62px;
+}
+.topico:hover {
+    background-color: var(--cor3);
+    transition: 0.7s;
+}
+.topico  > p:hover {
+    color: #494368;
+}
+.titulo {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #494368;
+    color: #494368;
+}
+main {
+    text-align: center;
+    color:#494368;
+}
+.seleciona {
+    text-align: center;
+    padding: 5px 40px;
+    display: inline-block;
+}
+.seleciona > p {
+    font-size: 1.2em;
+    color:#494368;
+}
+.seleciona > select {
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 5px solid #4943686b;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #494368d9;
+    cursor: pointer;
+}
+.entrada > p {
+    font-size: 1.2em;
+}
+.entrada > p > input {
+    border: 2px solid #4943686b;
+    border-radius: 5px;
+    height: 2vh;
+    font-weight: bold;
+    text-align: center;
+}
+.botao {
+    padding-top: 15px;
+}
+.botao > input {
+    width: 10vw;
+    height: 4vh;
+    font-weight: bold;
+    background-color: #494368f8;
+    color: white;
+    border-radius: 7px;
+    font-size: 1em;
+    border: 2px solid #4943686b;
+    cursor: pointer;
+
+}
+.botao > input:hover {
+    background-color: #4943686b;
+}
+.output {
+    padding-top: 30px;
+    font-size: 1.6em;
+}
+.seleciona > select:hover {
+    border: 5px solid #494368;
+}
+.entrada > p > input:hover {
+    border: 2px solid #494368;
+}
+#icon {
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+#icon:hover {
+    background-color: #49436856;
+}
+.fundo {
+    background-color: #49436872;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    color: #494368; 
+}
+.conteudo {
+    width: 30vw;
+    height: fit-content;
+    position: relative;
+    text-align: justify;
+    background-color: var(--cor1);
+    margin: 0px;
+    font-family: var(--fonte);
+    top: 35vh;
+    left: 35vw;
+    padding: 30px;
+    border-radius: 10px;
+    border: 5px solid var(--cor3);
+    padding-top: 0px;
+}
+.fundo.abrir {
+    display: flex;
+}
+.fechar {
+    border-radius: 50%;
+    font-size: 1.5em;
+    background-color:#494368 ;
+    color: var(--cor1);
+    position: relative;
+    top: -18px;
+    left: 104%;
+    cursor: pointer;
+    border: 3px solid var(--cor3);
+}
+.fechar:hover {
+    background-color: var(--cor3);
+    color: #494368;
+    border: 3px solid #494368 ;
+}
+#iconpop {
+    line-height: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 12px;
+    left: -35px;
+}
+span {
+    text-decoration: underline;
+}
+span:hover {
+    color: var(--cor3);
+}

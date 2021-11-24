@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de unidades</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="direcionador.js"></script>
+    <script src="massa.js"></script>
+    <script src="volume.js"></script>
+    <script src="distancia.js"></script>
+    <script src="energia.js"></script>
+    <script src="pressao.js"></script>
+    <script src="temperatura.js"></script>
+</head>
+<body onload='interpretador()'>
+    <header>Conversor de Unidades</header>
+    <div onload="direcao()" class="menu">
+        <div class="topico" id="massa"><p>Massa</p></div>
+        <div class="topico" id="volume"><p>Volume</p></div>
+        <div class="topico" id="distancia"><p>Distância</p></div>
+        <div class="topico" id="energia"><p>Energia</p></div>
+        <div class="topico" id="pressao"><p>Pressão</p></div>
+        <div class="topico" id="temperatura"><p>Temperatura</p></div>
+    </div>
+    <main class="calculo">
+        <h1 id="titulo" class="titulo"></h1>
+        <div class="seleciona" id="selecionainicio">
+            <p>Selecione a unidade inicial &nbsp<img id="icon" src="https://img.icons8.com/material/24/000000/info-popup--v2.png"/></p>
+            <select name="selecunit" class="selecionador" id="selecunitinicio">
+            </select>
+        </div>
+        <div class="seleciona" id="selecionafinal">
+            <p>Selecione a unidade final</p>
+            <select name="selecunit" class="selecionador" id="selecunitfinal">
+            </select>
+        </div>
+        <div class="entrada" id="entrada">
+            <p>Insira o valor que deseja converter: &nbsp
+            <input type="number" name="numentrada" id="nunentrada" placeholder="Valor"></p>
+        </div>
+        <div class="botao">
+        </div>
+        <div class="output">
+            Aguardando a seleção de dados...
+        </div>
+    </main>
+    <div class="fundo" id="fundo">
+        <div class="conteudo" id="conteudo">
+            <button class="fechar" id="fechar">X</button>
+            <img id = "iconpop" src="https://img.icons8.com/material/24/000000/info-popup--v2.png"/>
+            <p>Com dúvidas? Fique tranquilo, é bem fácil!</p>
+            <p>Vamos converter 3 metros para centímetros.</p>
+            <p>No campo <span>Selecione a unidade inicial</span>, selecione a opção <span>Metro (m)</span>. No campo <span>Selecione a unidade final</span>, selecione a opção <span>Centímetro (cm)</span>. Por fim, no campo <span>Insira o valor que deseja converter</span>, insira o valor 3.</p>
+            <p>Pronto! Agora basta clicar em <span>converter</span> e ver o seu resultado!</p>
+        </div>
+    </div>
+</body>
+<script>
+    function clicou() {
+        const pop = document.getElementById("fundo")
+        pop.classList.add("abrir")
+    }
+    const icon = document.getElementById("icon")
+    icon.addEventListener('click', clicou)
+    function fechou() {
+        const pop = document.getElementById("fundo")
+        pop.classList.remove("abrir")
+    }
+    const x = document.getElementById("fechar")
+    x.addEventListener('click', fechou)
+</script>
+</html>
